@@ -1,4 +1,4 @@
 [[headers]]
-  for = "/fonts/*"
+  for = "/*"
   [headers.values]
     Access-Control-Allow-Origin = "*"
