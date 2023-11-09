@@ -1,2 +1,35 @@
-/* Subsites have different font-subsetting. */
-@import url('../fonts/subsites-fonts/subsites-fonts.css');
+/*
+The subset font files and the declarations below were copied from velut.
+They exist because subsites can have characters that aren’t found on the main site, so the subsetting is different.
+*/
+
+@font-face {
+  font-family: 'Alegreya Subset';
+  src: url('subsites-fonts/alegreya-bold-subset.woff2') format('woff2'),
+    url('subsites-fonts/subsites-fonts/alegreya-bold-subset.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya Subset';
+  src: url('subsites-fonts/alegreya-bolditalic-subset.woff2') format('woff2'),
+    url('subsites-fonts/alegreya-bolditalic-subset.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya Subset';
+  src: url('subsites-fonts/alegreya-regular-subset.woff2') format('woff2'),
+    url('subsites-fonts/alegreya-regular-subset.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+html, body {
+  font-family: 'Alegreya', 'Alegreya Subset', serif;
+}
