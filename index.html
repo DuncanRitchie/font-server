@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fonts that Duncan Ritchie uses for his personal sites.">
+    <title>Fonts for Duncan’s websites</title>
+    <link rel="shortcut icon" href="https://www.duncanritchie.co.uk/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://www.duncanritchie.co.uk/css/main.css">
+    <link rel="stylesheet" href="https://www.duncanritchie.co.uk/css/subsites.css">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <main>
+        <h1>Fonts for Duncan’s websites</h1>
+				<p>
+					<em>I don’t expect people other than myself to use this; this is purely for me!</em>
+				</p>
+				<p>
+					This service exists to serve fonts for my websites, such as <a href="https://www.duncanritchie.co.uk">my personal site</a> and <a href="https://www.velut.co.uk">my Latin dictionary</a>.
+				</p>
+				<p>
+					This is useful for font subsetting, meaning my font-files contain only the glyphs I need.
+					Subsetting is more aggressive for my personal site than for my other sites, since I use fewer distinct characters. 
+				</p>
+				<p>
+					To use this, I import either main.css (for more restrictive subsetting) or subsites.css (for more generous subsetting) into HTML or CSS.
+				</p>
+				<pre><code>
+			    &lt;link rel="stylesheet" href="https://fonts.duncanritchie.co.uk/main.css"&gt;
+				</code></pre>
+
+				<pre><code>
+					@import url('https://fonts.duncanritchie.co.uk/main.css');
+				</code></pre>
+
+				<p>
+					A HTTP header of <code>Access-Control-Allow-Origin = "*"</code> ensures that CORS does not block the request for fonts.
+				</p>
+			</main>
+			<footer>
+					<ul>
+							<li>
+									<a href="https://www.duncanritchie.co.uk" title="Duncan Ritchie’s website">Made by Duncan Ritchie</a>
+							</li>
+							<li>
+									<a href="https://github.com/DuncanRitchie/font-server" title="Code for this page on GitHub">See the code</a>
+							</li>
+					</ul>
+			</footer>
+	</body>
+	</html>
