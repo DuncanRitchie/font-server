@@ -14,6 +14,13 @@
 			blockquote {
 				word-break: break-all;
 			}
+			dt {
+				margin-top: 0.5em;
+				font-weight: bold;
+				font-style: italic;
+				font-size: smaller;
+				color: var(--nav-text);
+			}
 		</style>
 </head>
 <body>
@@ -61,6 +68,71 @@
 					<blockquote style="font-style: italic; font-weight: bold;">
 						!"%&()+,-./0123456789:;<=>?ABCDEFGHIJKLMNOPQRSTUVWXYZ[]_abcdefghijklmnopqrstuvwxyz{}©ÁÉÏáäèéëíïóôöúüýÿĀāĒēĪīİıŌōŪūțȲȳ́̓ΐΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩάέήίαβγδεζηθικλμνξοπρςστυφχψωϊϋόύώϑϘϙϚϛϜϝϠϡϱְֲִֵַָֹּׁׂאבגדהוחיכלםמןנסעףפקרשתḗḥṻἀἁἄἅἈἉἌἐἑἒἔἕἘἙἜἝἠἡἤἥἦἧἨἩἬἭἮἰἱἴἵἶἷἸἹἼἽἾὀὁὄὅὈὉὌὍὐὑὔὕὖὙὝὠὡὤὦὨὬὮὰάήίὸόύᾱᾴᾶῄῆῇῐῑΐῖῘῡΰῤῥῦῬῳῶῷ–—‘’“”…‽∅⏑ÆæŒœ 
 					</blockquote>
+				</section>
+
+				<section>
+					<h2>How I do font-subsetting</h2>
+					<p>
+						I use <a href="https://www.fontsquirrel.com/tools/webfont-generator">Font Squirrel’s Webfont Generator</a>.
+						The fonts I upload are Alegreya Regular, Alegreya Italic, Alegreya Bold, and Alegreya Bold Italic.
+						(I have these saved locally; they should have 2131 or 2138 glyphs each.)
+					</p>
+					<p>
+						Then I make sure Font Squirrel is using the following settings:
+					</p>
+					<details><summary>Font Squirrel settings</summary>
+					
+						<dl>
+							<dt>Mode</dt>
+							<dd>Expert</dd>
+							<dt>Font formats</dt>
+							<dd>WOFF, WOFF2</dd>
+							<dt>Truetype hinting</dt>
+							<dd>Keep existing</dd>
+							<dt>Rendering</dt>
+							<dd>(None selected)</dd>
+							<dt>Vertical metrics</dt>
+							<dd>No adjustment</dd>
+							<dt>Fix missing glyphs</dt>
+							<dd>Spaces, hyphens</dd>
+							<dt>X-height matching</dt>
+							<dd>None</dd>
+							<dt>Protection</dt>
+							<dd>None</dd>
+							<dt>Subsetting</dt>
+							<dd>Custom subsetting</dd>
+							<dt>Character encoding / character type / language / Unicode tables / Unicode ranges</dt>
+							<dd>(None selected)</dd>
+							<dt>Single characters</dt>
+							<dd>(copied from character set above)</dd>
+							<dt>OpenType features</dt>
+							<dd>Keep all features</dd>
+							<dt>OpenType flattening</dt>
+							<dd>(None selected)</dd>
+							<dt>CSS</dt>
+							<dd>(None selected)</dd>
+							<dt>Font name suffix</dt>
+							<dd>-subset</dd>
+							<dt>Em square value</dt>
+							<dd>2048</dd>
+							<dt>Adjust glyph spacing</dt>
+							<dd>0</dd>
+							<dt>Shortcuts</dt>
+							<dd>Remember my settings</dd>
+							<dt>Agreement</dt>
+							<dd>Yes</dd>
+						</dl>
+					</details>
+					<p>
+						I click “Download your kit” and extract the files to the /subsites folder, deleting the files I don’t need.
+						(Only the .woff and .woff2 files are needed.)
+					</p>
+					<p>
+						Finally, I check that the “Samples” above look reasonable.
+						Alegreya doesn’t support Hebrew, or archaic Greek letters (ϘϙϚϛϜϝϠϡ), or the interrobang (‽), or the breve (⏑), so these will fall back to system fonts.
+						Everything else should render using Alegreya.
+						Dev tools in Firefox can show what fonts are being used for what glyphs.
+					</p>
 				</section>
 			</main>
 			<footer>
