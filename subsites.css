@@ -23,6 +23,15 @@ They exist because subsites can have characters that aren’t found on the main 
 
 @font-face {
   font-family: 'Alegreya Subset';
+  src: url('subsites-fonts/alegreya-italic-subset.woff2') format('woff2'),
+    url('subsites-fonts/alegreya-italic-subset.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alegreya Subset';
   src: url('subsites-fonts/alegreya-regular-subset.woff2') format('woff2'),
     url('subsites-fonts/alegreya-regular-subset.woff') format('woff');
   font-weight: 300;
@@ -31,5 +40,5 @@ They exist because subsites can have characters that aren’t found on the main 
 }
 
 html, body {
-  font-family: 'Alegreya', 'Alegreya Subset', serif;
+  font-family: 'Alegreya Subset', 'Alegreya', serif;
 }
