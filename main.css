@@ -28,3 +28,7 @@
 		 url('main-fonts/alegreya-v26-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
 		 url('main-fonts/alegreya-v26-latin-600.svg#Alegreya') format('svg'); /* Legacy iOS */
 }
+
+html, body {
+  font-family: 'Alegreya', serif;
+}
